@@ -1,9 +1,12 @@
+# С помощью средств библиотек OpenCV и NumPy создайте изображение шахматной доски шириной в 5 клетки и длиной в 5 клеток. Пусть верхний левый квадрат будет фиолетовым, а его сосед справа - белым. Дальше чередуйте эти цвета в шахматном порядке. Сохраните его на компьютере (с помощью imwrite). 
+
+
 import cv2
 import numpy as np
 
 new_path='S:\\git_intensive\\sd_course\\cv1\\chess.png'
 window_name = 'window1'
-image_width, image_length = 800 , 800
+image_width, image_length = 600 , 600
 is_magenta = True
 square_size = (image_width + image_length)/10
 img_chess = np.full((image_length, image_width, 3), (255, 255, 255), 'uint8')

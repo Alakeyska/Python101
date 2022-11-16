@@ -2,7 +2,7 @@
 
 ## Требования
 - Установленный Linux дистрибутив (например [Ubuntu](http://releases.ubuntu.com/18.04/))
-- Установленный [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu)
+- Установленный [ROS noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 - Базовые знания Unix (при отсутствии - задавайте больше вопросов)
 - Готовность к изучению нового и интересного =)
 
@@ -16,18 +16,18 @@ source /opt/ros/[distro]/setup.bash
 ```
 Для нашего случая:
 ```bash
-source /opt/ros/melodic/setup.bash
+source /opt/ros/noetic/setup.bash
 ```
 или
 ```bash
-. /opt/ros/melodic/setup.bash
+. /opt/ros/noetic/setup.bash
 ```
 
 Для проверки того, что ROS настроен, можно вывести значение переменной окружения ROS_DISTRO:
 ```bash
 echo $ROS_DISTRO
 ```
-Значение должно быть `melodic`.
+Значение должно быть `noetic`.
 
 > Символ '$' читает значение переменной окружения. Без него команда `echo ROS_DISTRO` просто выведет строку `ROS_DISTRO`.
 
@@ -37,7 +37,7 @@ echo $ROS_DISTRO
 
 Для того, чтобы настраивать ROS автоматически при создании сессий (открытии терминала), необходимо прописать
 ```bash
-. /opt/ros/melodic/setup.bash
+. /opt/ros/noetic/setup.bash
 ```
 в конец файла `~/.bashrc`. 
 
@@ -45,7 +45,7 @@ echo $ROS_DISTRO
 
 Можно просто прописать строку в конец файла командой:
 ```bash
-echo ". /opt/ros/melodic/setup.bash" >> ~/.bashrc
+echo ". /opt/ros/noetic/setup.bash" >> ~/.bashrc
 ```
 
 > Символ `>>` означает "добавить в конец файла" ("append to the end").
@@ -103,7 +103,7 @@ echo $ROS_PACKAGE_PATH
 ```
 В появившемся результате должен находиться путь до созданного рабочего простанства, а также путь до системного рабочего пространства. То есть, строка должна содержать результат похожий на 
 ```bash
-/home/user/catkin_ws/src:/opt/ros/melodic/share
+/home/user/catkin_ws/src:/opt/ros/noetic/share
 ```
 
 > Часто переменные окружения содержат список путей. А разделителем списка является символ '`:`'.
@@ -115,7 +115,7 @@ echo $ROS_PACKAGE_PATH
 ## В результате
 - В файле `~/.bashrc` содержится два пути:
 ```bash
-. /opt/ros/melodic/setup.bash
+. /opt/ros/noetic/setup.bash
 . ~/catkin_ws/devel/setup.bash
 ```
 

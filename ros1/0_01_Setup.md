@@ -88,12 +88,12 @@ catkin_make
 
 После этого рабочее пространство готово и осталось добавить в файл `~/.zshrc` строку для автоматической настройки ROS на подключение нашего ws:
 ```bash
-. ~/catkin_ws/devel/setup.bash
+. ~/catkin_ws/devel/setup.zsh
 ```
 
 Сделать это можно как ранее:
 ```bash
-echo ". ~/catkin_ws/devel/setup.bash" >> ~/.zshrc
+echo ". ~/catkin_ws/devel/setup.zsh" >> ~/.zshrc
 ```
 или открыть файл `~/.zshrc` и прописать ручками.
 
@@ -122,8 +122,8 @@ echo $ROS_PACKAGE_PATH
 ## В результате
 - В файле `~/.zshrc` содержится два пути:
 ```bash
-. /opt/ros/noetic/setup.bash
-. ~/catkin_ws/devel/setup.bash
+. /opt/ros/noetic/setup.zsh
+. ~/catkin_ws/devel/setup.zsh
 ```
 
 Первый настраивает системное рабочее пространство ROS (основная настройка), второй настраивает ROS для поиска пакетов также и в нашем ws.

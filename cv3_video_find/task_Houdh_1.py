@@ -32,7 +32,7 @@ while cap.isOpened():
             draw_line_P(x0, y0, x1, y1, frame, thickness=2)
     cv2.imshow("LINES", frame)
     cv2.imshow('canny', canny)
-    if cv2.waitKey(25) == ord('q'):
+    if cv2.waitKey(1) == ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
